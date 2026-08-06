@@ -27,8 +27,8 @@
   </section>
 
   <section><h2>Third-party services</h2>
-    <p><strong>Cloud vision recognition (fallback only).</strong> When on-device recognition is uncertain, the selected image may be sent over an encrypted connection to a vision model operated by Zhipu AI (GLM), via a proxy hosted on Tencent Cloud (SCF, ap-guangzhou) and Cloudflare Workers. The image is used for a single recognition request, no account information or device identifiers are attached, and the image is not retained beyond the short processing window. Recognition results exist only in your own inventory on your device.</p>
-    <p class="zh"><strong>云端识图（仅兜底）。</strong>当本地识别不确定时，所选图片可能通过加密连接，经腾讯云（SCF，广州区域）与 Cloudflare Workers 代理，发送至智谱 AI（GLM）视觉模型。图片仅用于一次性识别请求，不附带账号信息或设备标识符，且仅作短暂处理，不会长期保留。识别结果只存在于你自己设备上的物品库中。</p>
+    <p><strong>Cloud vision recognition (fallback only).</strong> When on-device recognition is uncertain, the selected image may be sent over an encrypted connection through a proxy hosted on Tencent Cloud (SCF, ap-guangzhou) or Cloudflare Workers to Google Gemini or Zhipu AI (GLM), depending on region and service availability. The image is used for a single recognition request and is not retained by Lockerly beyond the short processing window. Apple App Attest provides an app-install integrity proof to protect the recognition service from abuse; it is not used for advertising or cross-app tracking. Recognition results exist only in your own inventory on your device.</p>
+    <p class="zh"><strong>云端识图（仅兜底）。</strong>当本地识别不确定时，所选图片可能通过加密连接，经腾讯云（SCF，广州区域）或 Cloudflare Workers 代理，根据地区与服务可用性发送至 Google Gemini 或智谱 AI（GLM）视觉模型。图片仅用于一次性识别请求，Lockerly 不会在短暂处理窗口之外保留图片。Apple App Attest 会提供应用安装完整性证明，用于保护识图服务、防止滥用，不用于广告或跨应用追踪。识别结果只存在于你自己设备上的物品库中。</p>
     <p><strong>Apple.</strong> iCloud backup uses Apple CloudKit, and subscriptions are processed through the Apple App Store. Apple manages payments, subscription billing, and iCloud infrastructure under Apple's own privacy terms.</p>
     <p class="zh"><strong>Apple。</strong>iCloud 备份使用 Apple CloudKit，订阅通过 Apple App Store 处理。支付、订阅计费和 iCloud 基础设施均由 Apple 按照其自身隐私条款管理。</p>
   </section>
