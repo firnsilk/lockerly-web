@@ -7,12 +7,67 @@
   <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body><main>
-  <header><h1>Privacy Policy</h1><p class="meta">Effective August 6, 2026</p></header>
-  <section><h2>Inventory data</h2><p>Items, spaces, notes, and settings are stored on your device. Lockerly does not require an account for local use.</p><p class="zh">物品、空间、备注和设置保存在你的设备上。本地使用 Lockerly 无需注册账户。</p></section>
-  <section><h2>Photos and recognition</h2><p>Photos you choose are used to create item stickers. When cloud recognition is used, the selected image may be sent to the configured recognition service to return a suggested name and category.</p><p class="zh">你选择的照片用于制作物品贴纸。使用云端识别时，所选图片可能会发送到已配置的识别服务。</p></section>
-  <section><h2>iCloud backup</h2><p>If you enable iCloud backup, Lockerly stores a backup in your private Apple CloudKit database. Apple manages the iCloud account and infrastructure.</p><p class="zh">开启 iCloud 备份后，Lockerly 会将备份存储在你的 Apple CloudKit 私有数据库中。</p></section>
-  <section><h2>Notifications</h2><p>Reminder notifications are scheduled on your device after you grant permission. You can disable them in Lockerly or iPhone Settings.</p><p class="zh">获得授权后，物品提醒会在设备上排期。你可在 Lockerly 或 iPhone 设置中关闭通知。</p></section>
-  <section><h2>Deletion and retention</h2><p>Deleting local data removes it from this device. An existing iCloud backup remains until replaced or removed through the app or your iCloud data controls.</p><p class="zh">删除本地数据会将其从此设备移除。已有的 iCloud 备份会保留，直到被替换或删除。</p></section>
-  <nav><a href="../">Lockerly</a><a href="../terms/">Terms of Use</a></nav>
+  <header><h1>Privacy Policy</h1><p class="meta">Effective August 6, 2026</p>
+    <p>Lockerly helps you keep track of what you own. The app is built around a simple idea: your inventory belongs to you, and most of it never leaves your device. This policy explains what Lockerly does and does not collect, and how cloud recognition works when it is used.</p>
+    <p class="zh">Lockerly 帮助你记录和管理自己的物品。这款应用围绕一个简单理念设计：你的物品数据属于你，而且大部分数据不会离开你的设备。本政策说明 Lockerly 收集什么、不收集什么，以及云端识别在什么情况下会被使用。</p>
+  </header>
+
+  <section><h2>Information we collect</h2>
+    <p><strong>Information you provide voluntarily.</strong> Lockerly does not require an account or registration for local use. If you contact us by email, we receive the address you send from and use it only to reply.</p>
+    <p class="zh"><strong>你自愿提供的信息。</strong>本地使用 Lockerly 无需注册账号。如果你通过邮件联系我们，我们会收到你的发信地址，仅用于回复。</p>
+    <p><strong>Information collected automatically.</strong> Lockerly does not automatically collect personal information, device identifiers, analytics data, or usage tracking data. There are no advertising SDKs and no third-party trackers in the app.</p>
+    <p class="zh"><strong>自动收集的信息。</strong>Lockerly 不会自动收集个人信息、设备标识符、分析数据或使用追踪数据。应用内没有广告 SDK，也没有任何第三方追踪器。</p>
+    <p><strong>Photos and item recognition.</strong> Photos you choose are used to create item stickers on your device. Item recognition runs on-device for most photos. Only when on-device recognition is uncertain may the selected image be sent to a cloud vision service as a fallback, to return a suggested name and category. Fallback images are used for a single recognition request, are not linked to your identity, and are not stored by Lockerly (see Third-Party Services below).</p>
+    <p class="zh"><strong>照片与物品识别。</strong>你选择的照片用于在设备上制作物品贴纸。大多数照片的识别都在设备本地完成。仅当本地识别不确定时，所选图片才可能作为兜底发送至云端识图服务，以返回建议的名称和分类。兜底图片仅用于一次性识别请求，不与你的身份关联，Lockerly 不会存储这些图片（见下方"第三方服务"）。</p>
+  </section>
+
+  <section><h2>Data storage and backup</h2>
+    <p>Your items, spaces, notes, and settings are stored locally on your device. If you enable iCloud backup, Lockerly stores a backup in your private Apple CloudKit database; Apple manages the iCloud account, encryption, and infrastructure, and Lockerly cannot access it.</p>
+    <p class="zh">你的物品、空间、备注和设置保存在设备本地。开启 iCloud 备份后，Lockerly 会将备份存储在你私有的 Apple CloudKit 数据库中；iCloud 账户、加密和基础设施均由 Apple 管理，Lockerly 无法访问这些数据。</p>
+  </section>
+
+  <section><h2>Third-party services</h2>
+    <p><strong>Cloud vision recognition (fallback only).</strong> When on-device recognition is uncertain, the selected image may be sent over an encrypted connection to a vision model operated by Zhipu AI (GLM), via a proxy hosted on Tencent Cloud (SCF, ap-guangzhou) and Cloudflare Workers. The image is used for a single recognition request, no account information or device identifiers are attached, and the image is not retained beyond the short processing window. Recognition results exist only in your own inventory on your device.</p>
+    <p class="zh"><strong>云端识图（仅兜底）。</strong>当本地识别不确定时，所选图片可能通过加密连接，经腾讯云（SCF，广州区域）与 Cloudflare Workers 代理，发送至智谱 AI（GLM）视觉模型。图片仅用于一次性识别请求，不附带账号信息或设备标识符，且仅作短暂处理，不会长期保留。识别结果只存在于你自己设备上的物品库中。</p>
+    <p><strong>Apple.</strong> iCloud backup uses Apple CloudKit, and subscriptions are processed through the Apple App Store. Apple manages payments, subscription billing, and iCloud infrastructure under Apple's own privacy terms.</p>
+    <p class="zh"><strong>Apple。</strong>iCloud 备份使用 Apple CloudKit，订阅通过 Apple App Store 处理。支付、订阅计费和 iCloud 基础设施均由 Apple 按照其自身隐私条款管理。</p>
+  </section>
+
+  <section><h2>Subscriptions</h2>
+    <p>Lockerly Pro is sold as an auto-renewing subscription through the Apple App Store. Lockerly does not receive or store your payment details. You can manage or cancel your subscription in your Apple ID settings.</p>
+    <p class="zh">Lockerly Pro 是通过 Apple App Store 销售的自動续订订阅。Lockerly 不会获取或存储你的支付信息。你可以在自己的 Apple ID 设置中管理或取消订阅。</p>
+  </section>
+
+  <section><h2>Analytics and advertising</h2>
+    <p>Lockerly does not integrate any analytics or advertising SDKs, does not use cookies or similar tracking technologies, and does not track you across apps or websites.</p>
+    <p class="zh">Lockerly 未集成任何分析或广告 SDK，不使用 Cookie 或类似追踪技术，也不会跨应用或跨网站追踪你。</p>
+  </section>
+
+  <section><h2>Notifications</h2>
+    <p>Reminder notifications are scheduled on your device after you grant permission. Lockerly does not send push notifications and does not see the reminders you create. You can disable notifications in Lockerly or iPhone Settings at any time.</p>
+    <p class="zh">获得授权后，物品提醒会在你的设备上本地排期。Lockerly 不会发送推送通知，也看不到你创建的提醒。你随时可以在 Lockerly 或 iPhone 设置中关闭通知。</p>
+  </section>
+
+  <section><h2>Deletion and retention</h2>
+    <p>Deleting local data removes it from this device. An existing iCloud backup remains until it is replaced or removed through the app or your iCloud data controls. Because Lockerly does not retain personal data on its own servers, there is nothing further to erase.</p>
+    <p class="zh">删除本地数据会将其从此设备移除。已有的 iCloud 备份会保留，直到被替换或通过应用及 iCloud 数据管理功能删除。由于 Lockerly 不在自己的服务器上保留个人数据，因此没有需要进一步清除的内容。</p>
+  </section>
+
+  <section><h2>Your rights</h2>
+    <p>Because your data stays on your device and Lockerly keeps no personal data of its own, rights such as access, correction, and erasure are exercised directly in the app by editing or deleting your inventory. If you believe you have sent us personal data and want it removed, contact us and we will help.</p>
+    <p class="zh">由于你的数据保存在自己的设备上，且 Lockerly 自身不保留任何个人数据，访问、更正、删除等权利可直接在应用内通过编辑或删除你的物品数据来实现。如果你认为曾向我们发送过个人数据并希望删除，请联系我们，我们将协助处理。</p>
+  </section>
+
+  <section><h2>Changes to this policy</h2>
+    <p>If this policy changes, the updated version will be published on this page with a new effective date at the top.</p>
+    <p class="zh">如果本政策发生变化，更新版本将发布在本页面，并在顶部标注新的生效日期。</p>
+  </section>
+
+  <section><h2>Contact</h2>
+    <p>If you have questions about this policy or your data, email us at <a href="mailto:support@lockerly.app">support@lockerly.app</a>.</p>
+    <p class="zh">如对本政策或你的数据有疑问，请发送邮件至 <a href="mailto:support@lockerly.app">support@lockerly.app</a>。</p>
+  </section>
+
+  <nav><a href="../">Lockerly</a><a href="../terms/">Terms of Use</a><a href="../support/">Help &amp; Feedback</a></nav>
 </main></body>
 </html>
