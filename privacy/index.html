@@ -8,17 +8,17 @@
 </head>
 <body><main>
   <header><h1>Privacy Policy</h1><p class="meta">Effective August 6, 2026</p>
-    <p>Lockerly helps you keep track of what you own. The app is built around a simple idea: your inventory belongs to you, and most of it never leaves your device. This policy explains what Lockerly does and does not collect, and how cloud recognition works when it is used.</p>
-    <p class="zh">Lockerly 帮助你记录和管理自己的物品。这款应用围绕一个简单理念设计：你的物品数据属于你，而且大部分数据不会离开你的设备。本政策说明 Lockerly 收集什么、不收集什么，以及云端识别在什么情况下会被使用。</p>
+    <p>Lockerly helps you keep track of what you own. Your inventory is stored on your device unless you choose iCloud backup. This policy explains the limited data processing used for item recognition and optional features.</p>
+    <p class="zh">Lockerly 帮助你记录和管理自己的物品。除非你选择使用 iCloud 备份，物品数据会保存在你的设备上。本政策说明物品识别及可选功能所需的有限数据处理。</p>
   </header>
 
   <section><h2>Information we collect</h2>
     <p><strong>Information you provide voluntarily.</strong> Lockerly does not require an account or registration for local use. If you contact us by email, we receive the address you send from and use it only to reply.</p>
     <p class="zh"><strong>你自愿提供的信息。</strong>本地使用 Lockerly 无需注册账号。如果你通过邮件联系我们，我们会收到你的发信地址，仅用于回复。</p>
-    <p><strong>Information collected automatically.</strong> Lockerly does not automatically collect personal information, device identifiers, analytics data, or usage tracking data. There are no advertising SDKs and no third-party trackers in the app.</p>
-    <p class="zh"><strong>自动收集的信息。</strong>Lockerly 不会自动收集个人信息、设备标识符、分析数据或使用追踪数据。应用内没有广告 SDK，也没有任何第三方追踪器。</p>
-    <p><strong>Photos and item recognition.</strong> Photos you choose are used to create item stickers on your device. Item recognition runs on-device for most photos. Only when on-device recognition is uncertain may the selected image be sent to a cloud vision service as a fallback, to return a suggested name and category. Fallback images are used for a single recognition request, are not linked to your identity, and are not stored by Lockerly (see Third-Party Services below).</p>
-    <p class="zh"><strong>照片与物品识别。</strong>你选择的照片用于在设备上制作物品贴纸。大多数照片的识别都在设备本地完成。仅当本地识别不确定时，所选图片才可能作为兜底发送至云端识图服务，以返回建议的名称和分类。兜底图片仅用于一次性识别请求，不与你的身份关联，Lockerly 不会存储这些图片（见下方"第三方服务"）。</p>
+    <p><strong>Information collected automatically.</strong> Lockerly does not use analytics, advertising SDKs, or cross-app tracking. When cloud recognition is requested, Apple App Attest supplies an app-install integrity proof to protect the service from abuse.</p>
+    <p class="zh"><strong>自动处理的信息。</strong>Lockerly 不使用分析服务、广告 SDK 或跨 App 追踪。发起云端识别时，Apple App Attest 会提供 App 安装完整性证明，用于保护识别服务、防止滥用。</p>
+    <p><strong>Photos and item recognition.</strong> Lockerly extracts the photographed object on your device to create a sticker. After extraction succeeds, a compressed image of that object (up to 640 pixels on its longest side) is sent for one cloud recognition request to suggest its name and category. You may cancel recognition and enter these details yourself. Lockerly does not retain the recognition image after the short processing window.</p>
+    <p class="zh"><strong>照片与物品识别。</strong>Lockerly 会先在设备上抠出拍摄的物体，用于制作贴纸。抠图成功后，该物体的压缩图片（最长边不超过 640 像素）会发起一次云端识别，用于建议名称和分类。你可以取消识别并自行填写。Lockerly 不会在短暂处理窗口结束后保留识别图片。</p>
   </section>
 
   <section><h2>Data storage and backup</h2>
@@ -27,8 +27,8 @@
   </section>
 
   <section><h2>Third-party services</h2>
-    <p><strong>Cloud vision recognition (fallback only).</strong> When on-device recognition is uncertain, the selected image may be sent over an encrypted connection through a proxy hosted on Tencent Cloud (SCF, ap-guangzhou) or Cloudflare Workers to Google Gemini or Zhipu AI (GLM), depending on region and service availability. The image is used for a single recognition request and is not retained by Lockerly beyond the short processing window. Apple App Attest provides an app-install integrity proof to protect the recognition service from abuse; it is not used for advertising or cross-app tracking. Recognition results exist only in your own inventory on your device.</p>
-    <p class="zh"><strong>云端识图（仅兜底）。</strong>当本地识别不确定时，所选图片可能通过加密连接，经腾讯云（SCF，广州区域）或 Cloudflare Workers 代理，根据地区与服务可用性发送至 Google Gemini 或智谱 AI（GLM）视觉模型。图片仅用于一次性识别请求，Lockerly 不会在短暂处理窗口之外保留图片。Apple App Attest 会提供应用安装完整性证明，用于保护识图服务、防止滥用，不用于广告或跨应用追踪。识别结果只存在于你自己设备上的物品库中。</p>
+    <p><strong>Cloud vision recognition.</strong> The processed object image and your category names are sent over an encrypted connection through Tencent Cloud SCF (mainland China first) or Cloudflare Workers (other regions first) to Zhipu AI GLM. If a network connection fails, Lockerly may try the other route. The data is used to return one suggested name and category. App Attest integrity proofs are used only for service security, not advertising or tracking.</p>
+    <p class="zh"><strong>云端识图。</strong>处理后的物体图片和你的分类名称会通过加密连接，经腾讯云 SCF（中国大陆优先）或 Cloudflare Workers（其他地区优先）发送至智谱 AI GLM。如网络连接失败，Lockerly 可能尝试另一条路由。这些数据用于返回一次建议名称和分类。App Attest 完整性证明仅用于服务安全，不用于广告或追踪。</p>
     <p><strong>Apple.</strong> iCloud backup uses Apple CloudKit, and subscriptions are processed through the Apple App Store. Apple manages payments, subscription billing, and iCloud infrastructure under Apple's own privacy terms.</p>
     <p class="zh"><strong>Apple。</strong>iCloud 备份使用 Apple CloudKit，订阅通过 Apple App Store 处理。支付、订阅计费和 iCloud 基础设施均由 Apple 按照其自身隐私条款管理。</p>
   </section>
